@@ -49,29 +49,15 @@ define([
 	
 	// set up the epicardial data source
 	var epicardialData = new CSV({
-		url: “/figure4/data/Figure4A.csv"
+		url: “/figure4/data/Figure4B.csv"
 	});
 	// and the data series for the current data
-	var epicardialCurrentData = new DataSeries(epicardialData, {}, {
+	var endocardialCurrentData = new DataSeries(endocardialData, {}, {
 		x: "time",
 		y: “current”
 	});
 	
-	// set up the experimental data source
-	//var experimentalData = new CSV({
-	//	url: "/example/data/Figure4B”
-	//});
-	// and the data series for the original experimental data
-	//var potentialExperimentalOriginal = new DataSeries(experimentalData, {}, {
-	//	x: "time",
-	//	y: "potential-original-source"
-	//});
-	// and the data series for the temperature corrected experimental data used in the paper
-	//var potentialExperimental = new DataSeries(experimentalData, {}, {
-	//	x: "time",
-	//	y: "potential-current-paper"
-	//});
-	
+		
 	// Create the chart within it's "holding" node
 	var chart = new Chart("figure4AGoesHere", { 
 		title: “Epicardial Current Traces“,
@@ -85,14 +71,14 @@ define([
 	chart.setTheme(theme);
 	
 	// Add a line plot for the simulation data
-	chart.addPlot(“epicardial”, {
+	chart.addPlot(“endocardial”, {
 		type: LinePlot
 	});
 	
 	
-	// Add the epicardial data
-	chart.addSeries(“Epicardial current traces”, epicardialCurrentData, {
-		plot: “epicardial”
+	// Add the endocardial data
+	chart.addSeries(“Endocardial current traces”, endocardialCurrentData, {
+		plot: “endocardial”
 	});
 	
 	
