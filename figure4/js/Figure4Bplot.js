@@ -49,36 +49,36 @@ define([
 	
 	// set up the epicardial data source
 	var epicardialData = new CSV({
-		url: “/figure4/data/Figure4B.csv"
+		url: "/figure4/data/Figure4B.csv"
 	});
 	// and the data series for the current data
 	var endocardialCurrentData = new DataSeries(endocardialData, {}, {
 		x: "time",
-		y: “current”
+		y: "current"
 	});
 	
 		
 	// Create the chart within it's "holding" node
 	var chart = new Chart("figure4AGoesHere", { 
-		title: “Epicardial Current Traces“,
+		title: "Epicardial Current Traces",
 		titlePos: "bottom",
 		titleGap: 25,
 		//titleFont: "normal normal normal 15pt Arial",
-		titleFontColor: “red”
+		titleFontColor: "red"
 	});
 	
 	// Set the theme
 	chart.setTheme(theme);
 	
 	// Add a line plot for the simulation data
-	chart.addPlot(“endocardial”, {
+	chart.addPlot("endocardial", {
 		type: LinePlot
 	});
 	
 	
 	// Add the endocardial data
-	chart.addSeries(“Endocardial current traces”, endocardialCurrentData, {
-		plot: “endocardial”
+	chart.addSeries("Endocardial current traces", endocardialCurrentData, {
+		plot: "endocardial"
 	});
 	
 	
