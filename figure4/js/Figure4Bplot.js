@@ -59,8 +59,8 @@ define([
 	
 		
 	// Create the chart within it's "holding" node
-	var chart = new Chart("figure4AGoesHere", { 
-		title: "Epicardial Current Traces",
+	var chart = new Chart("figure4BGoesHere", {
+		title: "Endocardial Current Traces",
 		titlePos: "bottom",
 		titleGap: 25,
 		//titleFont: "normal normal normal 15pt Arial",
